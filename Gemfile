@@ -2,13 +2,23 @@ require 'rbconfig'
 HOST_OS = RbConfig::CONFIG['host_os']
 source 'https://rubygems.org'
 gem 'rails', '3.2.3'
-gem 'sqlite3'
+
+group :production do
+  gem 'pg'
+end
+group :development do
+  gem 'sqlite3'
+  gem 'annotate', '~> 2.4.1.beta'
+  gem 'debugger'
+end
 gem 'jquery-rails'
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
   gem 'jquery-ui-rails'
   gem 'uglifier', '>= 1.0.3'
+  gem 'twitter-bootstrap-rails'
+  gem 'therubyracer'
 end
 gem "rspec-rails", ">= 2.9.0.rc2", :group => [:development, :test]
 gem "email_spec", ">= 1.2.1", :group => :test
@@ -43,7 +53,3 @@ gem "therubyracer", :group => :assets, :platform => :ruby
 gem "httparty"
 gem 'gibberish'
 gem 'thin'
-
-group :development do
-  gem 'debugger'
-end
