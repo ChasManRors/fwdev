@@ -1,0 +1,24 @@
+rvm --default use 1.9.3-p125@rails32
+
+# rvm use 1.9.3@feewise
+# rvm use 1.9.2-p290@feewise
+# ruby-1.9.3-p125@feewise
+# rvm --default use 1.9.3@rails32
+
+alias rss='rails s --debugger'
+alias ss='rails s'
+#alias rs='rails s'  # no re: /usr/bin/rs
+
+alias rc='rails c'
+alias sc='rails c'
+
+alias rg='rails g'
+alias sg='rails g'
+
+alias bi='bundle install'
+alias be='bundle exec'
+alias bu='bundle update'
+alias bo='bundle open'
+alias bepc='RAILS_ENV=production bundle exec rake assets:precompile'
+
+alias o=heroku

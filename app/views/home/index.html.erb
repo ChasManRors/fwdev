@@ -1,4 +1,65 @@
-<h3>Home</h3>
-<% @users.each do |user| %>
-  <p>User: <%=link_to user.name, user %></p>
-<% end %>
+<h2>home index.html.erb</h2>
+
+<div class="tabbable">
+  <ul class="nav nav-tabs">
+    <li class="active"><a href="#1" data-toggle="tab">Sign in</a></li>
+    <li><a href="#2" data-toggle="tab">Sign up</a></li>
+    <li><a href="#3" data-toggle="tab">Forgot?</a></li>
+  </ul>
+  <div class="tab-content">
+    <div class="tab-pane active" id="1">
+      <p>I'm in Section 1.</p>
+
+      <h2>Sign in</h2>
+
+      <form accept-charset="UTF-8" action="/users/sign_in" class="simple_form new_user" id="new_user" method="post" novalidate="novalidate"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="JCZmktos0rfvATJqbC+CPeeGFjlprFQ4jTr0SElW3l0=" /></div>
+        <div class="inputs">
+          <div class="control-group email optional"><label class="email optional control-label" for="user_email">Email</label><div class="controls"><input autofocus="autofocus" class="string email optional" id="user_email" name="user[email]" size="50" type="email" value="" /></div></div>
+          <div class="control-group password optional"><label class="password optional control-label" for="user_password">Password</label><div class="controls"><input class="password optional" id="user_password" name="user[password]" size="50" type="password" /></div></div>
+          <div class="control-group boolean optional"><label class="boolean optional control-label" for="user_remember_me">Remember me</label><div class="controls"><input name="user[remember_me]" type="hidden" value="0" /><label class="checkbox"><input class="boolean optional" id="user_remember_me" name="user[remember_me]" type="checkbox" value="1" /></label></div></div>
+        </div>
+
+        <div class="actions">
+          <input class="btn" name="commit" type="submit" value="Sign in" />
+        </div>
+      </form>
+      <a href="/users/sign_up">Sign up</a><br />
+      <a href="/users/password/new">Forgot your password?</a><br />
+      <!-- END <h2>Sign in</h2> -->
+
+    </div>
+    <div class="tab-pane" id="2">
+
+      <h2>Sign up</h2>
+      <form accept-charset="UTF-8" action="/users" class="simple_form new_user" id="new_user" method="post" novalidate="novalidate"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="JCZmktos0rfvATJqbC+CPeeGFjlprFQ4jTr0SElW3l0=" /></div>
+        <div class="inputs">
+          <div class="control-group email required"><label class="email required control-label" for="user_email"><abbr title="required">*</abbr> Email</label><div class="controls"><input autofocus="autofocus" class="string email required" id="user_email" name="user[email]" size="50" type="email" value="" /></div></div>
+          <div class="control-group password required"><label class="password required control-label" for="user_password"><abbr title="required">*</abbr> Password</label><div class="controls"><input class="password required" id="user_password" name="user[password]" size="50" type="password" /></div></div>
+          <div class="control-group password required"><label class="password required control-label" for="user_password_confirmation"><abbr title="required">*</abbr> Password confirmation</label><div class="controls"><input class="password required" id="user_password_confirmation" name="user[password_confirmation]" size="50" type="password" /></div></div>
+        </div>
+        <div class="actions">
+          <input class="btn" name="commit" type="submit" value="Sign up" />
+        </div>
+      </form>
+      <a href="/users/sign_in">Sign in</a><br />
+      <a href="/users/password/new">Forgot your password?</a><br />
+      <!-- END <h2>Sign up</h2> -->
+
+    </div>
+    <div class="tab-pane" id="3">
+
+      <h2>Forgot your password?</h2>
+      <form accept-charset="UTF-8" action="/users/password" class="simple_form new_user" id="new_user" method="post" novalidate="novalidate"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="JCZmktos0rfvATJqbC+CPeeGFjlprFQ4jTr0SElW3l0=" /></div>
+        <div class="inputs">
+          <div class="control-group email required"><label class="email required control-label" for="user_email"><abbr title="required">*</abbr> Email</label><div class="controls"><input class="string email required" id="user_email" name="user[email]" size="50" type="email" value="" /></div></div>
+        </div>
+        <div class="actions">
+          <input class="btn" name="commit" type="submit" value="Send me reset password instructions" />
+        </div>
+      </form>
+      <a href="/users/sign_in">Sign in</a><br />
+      <a href="/users/sign_up">Sign up</a><br />
+
+    </div>
+  </div>
+</div>

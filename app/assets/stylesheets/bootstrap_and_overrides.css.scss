@@ -2,5 +2,17 @@
 $iconSpritePath: image-path('glyphicons-halflings.png');
 $iconWhiteSpritePath: image-path('glyphicons-halflings-white.png');
 @import "bootstrap";
-body { padding-top: 60px; }
+// body { padding-top: 60px; } "<%= image_tag('bg.jpg' %>"
+// background:url(smiley.gif) top left no-repeat,
+
+body {
+    background: url(/assets/bg.jpg) repeat-x scroll 0 0 #0C3F84;
+    color: #333333;
+    font-family: Arial,Tahoma,Verdana;
+    font-size: 12px;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+}
+
 @import "bootstrap-responsive";
