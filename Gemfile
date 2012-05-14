@@ -43,3 +43,7 @@ gem "therubyracer", :group => :assets, :platform => :ruby
 gem "httparty"
 gem 'gibberish'
 gem 'thin'
+
+group :development do
+  gem 'debugger'
+end
